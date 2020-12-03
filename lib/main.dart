@@ -39,6 +39,10 @@ class _HomePageState extends State<HomePage> {
   String validatepass(value) {
     if (value.isEmpty) {
       return "Require Password";
+    } else if (value.length < 6) {
+      return "SHould Be At Least 6 charcaters";
+    } else if (value.length > 15) {
+      return "SHould Not Be More Than 15 charcaters";
     } else {
       return null;
     }
